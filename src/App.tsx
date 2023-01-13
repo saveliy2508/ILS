@@ -5,8 +5,8 @@ import {RequestList} from "./ui/Requests/RequestsList/RequestList";
 function App() {
     return (
         <div className="App">
-            <RequestList />
-            <Map />
+            <RequestList/>
+            <Map/>
         </div>
     );
 }
