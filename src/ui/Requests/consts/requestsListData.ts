@@ -34,11 +34,4 @@ export const requestsListData = [
         toLat: 59.84660399,
         toLng: 30.29496392
     },
-    {
-        id: 6,
-        fromLat: 52.23567701,
-        fromLng: 32.28064206,
-        toLat: 52.14660399,
-        toLng: 32.39496392
-    },
 ]

@@ -21,6 +21,7 @@ export const Map = () => {
     useEffect(() => {
         if (toLat && toLng && fromLat && fromLng) {
             dispatch(geometryClear());
+            //@ts-ignore
             dispatch(getGeometryFetch({fromPoint: [toLat, toLng], toPoint: [fromLat, fromLng]}));
         }
     }, [dispatch, fromLat, fromLng, toLat, toLng]);
@@ -29,9 +30,8 @@ export const Map = () => {
         return null;
     }
 
-
     return (
-        <MapContainer className='MapContainer' center={fromPoint as LatLngExpression} zoom={12} scrollWheelZoom={true}>
+        <MapContainer className='MapContainer' center={fromPoint as LatLngExpression} zoom={13} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

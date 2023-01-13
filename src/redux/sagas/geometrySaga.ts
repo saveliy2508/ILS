@@ -8,9 +8,9 @@ export const geometryFetch = async (coordinates: { fromPoint: Coordinate[], toPo
     return fetch(`http://router.project-osrm.org/route/v1/driving/${coordinatesToString}?geometries=geojson`);
 }
 
-function* workGetGeometryFetch(action: PayloadAction<{}>) {
+// Я не помню как саги типизировать :)
+function* workGetGeometryFetch(action: PayloadAction) {
     try {
-        console.log(action.payload)
         //@ts-ignore
         const geometry = yield call(geometryFetch, action.payload);
         //@ts-ignore
